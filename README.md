@@ -8,7 +8,7 @@ You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
 ```bash
 cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch MIT
+bench get-app $URL_OF_THIS_REPO --branch version-1
 bench install-app dux_portal
 ```
 
@@ -27,6 +27,13 @@ Pre-commit is configured to use the following tools for checking and formatting 
 - eslint
 - prettier
 - pyupgrade
+### CI
+
+This app can use GitHub Actions for CI. The following workflows are configured:
+
+- CI: Installs this app and runs unit tests on every push to `develop` branch.
+- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
+
 
 ### License
 

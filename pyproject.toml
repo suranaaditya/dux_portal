@@ -1,7 +1,7 @@
 [project]
 name = "dux_portal"
 authors = [
-    { name = "Dux DigiTech", email = "aditya.surana@thesvsgroup.org"}
+    { name = "Dux Digitech", email = "aditya.surana@thesvsgroup.org"}
 ]
 description = "Role-based smart portal and home screen builder for Frappe ERPNext"
 requires-python = ">=3.14"

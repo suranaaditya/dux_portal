@@ -1,6 +1,6 @@
 app_name = "dux_portal"
 app_title = "Dux Portal"
-app_publisher = "Dux DigiTech"
+app_publisher = "Dux Digitech"
 app_description = "Role-based smart portal and home screen builder for Frappe ERPNext"
 app_email = "aditya.surana@thesvsgroup.org"
 app_license = "mit"

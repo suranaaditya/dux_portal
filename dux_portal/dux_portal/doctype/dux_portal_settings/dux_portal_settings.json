@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-05 20:20:12.004662",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "items_section_tab",
+  "show_items_section",
+  "items_section_label",
+  "items_doctype",
+  "items_display_field",
+  "items_abbr_field",
+  "col_break_1",
+  "items_collapsed",
+  "items_visible_to_role",
+  "appearance_section_tab",
+  "portal_title",
+  "footer_text",
+  "logo_section",
+  "logo",
+  "logo_height",
+  "logo_style",
+  "logo_base64"
+ ],
+ "fields": [
+  {
+   "fieldname": "items_section_tab",
+   "fieldtype": "Section Break",
+   "label": "My Items Section"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_items_section",
+   "fieldtype": "Check",
+   "label": "Show Items Section"
+  },
+  {
+   "default": "My Items",
+   "description": "e.g. My Institutions, My Projects, My Sites",
+   "fieldname": "items_section_label",
+   "fieldtype": "Data",
+   "label": "Section Label"
+  },
+  {
+   "description": "Which DocType to fetch from User Permissions e.g. Company, Project",
+   "fieldname": "items_doctype",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType"
+  },
+  {
+   "default": "name",
+   "description": "Field to show as the item label (usually name)",
+   "fieldname": "items_display_field",
+   "fieldtype": "Data",
+   "label": "Display Field"
+  },
+  {
+   "description": "Optional short code field e.g. abbr (leave blank if none)",
+   "fieldname": "items_abbr_field",
+   "fieldtype": "Data",
+   "label": "Abbreviation Field"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "items_collapsed",
+   "fieldtype": "Check",
+   "label": "Collapsed by Default"
+  },
+  {
+   "description": "Leave blank to show to all users",
+   "fieldname": "items_visible_to_role",
+   "fieldtype": "Link",
+   "label": "Visible to Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "appearance_section_tab",
+   "fieldtype": "Section Break",
+   "label": "Appearance"
+  },
+  {
+   "default": "Dux Portal",
+   "description": "Shown in topbar e.g. RGI Portal, Acme ERP",
+   "fieldname": "portal_title",
+   "fieldtype": "Data",
+   "label": "Portal Title"
+  },
+  {
+   "default": "Powered by Dux DigiTech",
+   "fieldname": "footer_text",
+   "fieldtype": "Data",
+   "label": "Footer Text"
+  },
+  {
+   "fieldname": "logo_section",
+   "fieldtype": "Section Break",
+   "label": "Logo"
+  },
+  {
+   "description": "Upload client logo shown in portal topbar",
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "default": "24",
+   "fieldname": "logo_height",
+   "fieldtype": "Int",
+   "label": "Logo Height (px)"
+  },
+  {
+   "default": "Original",
+   "description": "Original: no filter. Make Black: for white logos on light bg. Make White: for dark logos.",
+   "fieldname": "logo_style",
+   "fieldtype": "Select",
+   "label": "Logo Style",
+   "options": "Original\nMake Black\nMake White"
+  },
+  {
+   "description": "Auto-generated from Logo field",
+   "fieldname": "logo_base64",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Logo Base64"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-05 21:22:32.292387",
+ "modified_by": "Administrator",
+ "module": "Dux Portal",
+ "name": "Dux Portal Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

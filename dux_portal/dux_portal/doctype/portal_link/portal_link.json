@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-05 17:38:11.259399",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "description",
+  "url",
+  "section",
+  "icon_svg",
+  "column_break_1",
+  "visible_to",
+  "role",
+  "user",
+  "sort_order",
+  "is_active",
+  "roles",
+  "users"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "Portal Section",
+   "reqd": 1
+  },
+  {
+   "fieldname": "icon_svg",
+   "fieldtype": "Code",
+   "label": "Icon SVG",
+   "options": "SVG"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "All",
+   "fieldname": "visible_to",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Visible To",
+   "options": "All\nRole\nRoles\nUser\nRoles & Users",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.visible_to == 'Role'",
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "options": "Role"
+  },
+  {
+   "depends_on": "eval:doc.visible_to == 'User'",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "label": "Sort Order"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "depends_on": "eval:doc.visible_to == 'Roles' || doc.visible_to == 'Roles & Users'",
+   "fieldname": "roles",
+   "fieldtype": "Table",
+   "label": "Roles",
+   "options": "Portal Link Role"
+  },
+  {
+   "depends_on": "eval:doc.visible_to == 'Roles & Users'",
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "Portal Link User"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-05 22:52:52.186723",
+ "modified_by": "Administrator",
+ "module": "Dux Portal",
+ "name": "Portal Link",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

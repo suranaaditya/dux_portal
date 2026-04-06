@@ -250,3 +250,25 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+role_home_page = {
+    "System Manager": "dux-portal",
+    "Accounts User": "dux-portal",
+    "Purchase User": "dux-portal",
+    "Stock User": "dux-portal",
+}
+
+app_include_js = [
+    "/assets/dux_portal/js/dux_portal_icons.js",
+    "/assets/dux_portal/js/dux_portal_form.js",
+    "/assets/dux_portal/js/portal_home_button.js",
+]
+
+navbar_items = [
+    {
+        "item_label": "Home",
+        "item_type": "Route",
+        "route": "/app/dux-portal",
+        "is_standard": 1
+    }
+]

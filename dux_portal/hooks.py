@@ -249,14 +249,14 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-
-
-role_home_page = {
-    "System Manager": "dux-portal",
-    "Accounts User": "dux-portal",
-    "Purchase User": "dux-portal",
-    "Stock User": "dux-portal",
-}
+# Uncomment below to set dux-portal as the default home page for these roles.
+# Only enable after verifying the portal works correctly on your site.
+# role_home_page = {
+#     "System Manager": "dux-portal",
+#     "Accounts User":  "dux-portal",
+#     "Purchase User":  "dux-portal",
+#     "Stock User":     "dux-portal",
+# }
 
 app_include_js = [
     "/assets/dux_portal/js/dux_portal_icons.js",

@@ -162,10 +162,23 @@ def get_portal_data():
     except Exception as e:
         frappe.log_error(str(e), "Dux Portal get_items error")
 
+    ic_pending = 0
+    try:
+        from dux_voucher.dux_voucher.api.ic_transfer_api import get_pending_ic_entries_count
+        user_companies = [i["name"] for i in items] if items else []
+        if not user_companies and "System Manager" in roles:
+            all_cos = frappe.get_all("Company", filters={"is_group": 0}, fields=["name"])
+            user_companies = [c.name for c in all_cos]
+        if user_companies:
+            ic_pending = get_pending_ic_entries_count(user_companies)
+    except Exception:
+        pass
+
     return {
         "user": user,
         "full_name": full_name,
         "sections": result,
         "items": items,
-        "settings": settings
+        "settings": settings,
+        "ic_pending": ic_pending
     }

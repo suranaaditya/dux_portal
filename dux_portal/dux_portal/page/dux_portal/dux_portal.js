@@ -248,7 +248,7 @@ function render_portal(wrapper, data) {
 					(data.ic_pending > 1 ? 's' : '') + ' pending your confirmation'
 				)
 				.on('click', function() {
-					frappe.set_route('List', 'Inter-Company Transfer', {mirror_status: 'Pending Review'});
+					frappe.set_route('query-report', 'ICT Pending Confirmation');
 				});
 			$hero.append($notif);
 		}

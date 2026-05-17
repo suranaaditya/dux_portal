@@ -153,6 +153,10 @@ function render_portal(wrapper, data) {
 		'.dp-tb-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }' +
 		'.dp-time { font-family: monospace; font-size: 11px; color: var(--dp-tx3); }' +
 		'.dp-user-pill { display: flex; align-items: center; gap: 8px; background: var(--dp-surface2); border: 1px solid var(--dp-bd); border-radius: 8px; padding: 5px 10px; }' +
+		'.dp-gv-pill { display: flex; align-items: center; gap: 8px; background: var(--dp-surface2); border: 1px solid var(--dp-bd); border-radius: 8px; padding: 5px 10px; font-size: 13px; font-weight: 500; color: var(--dp-tx); text-decoration: none; transition: background .12s; }' +
+		'.dp-gv-pill:hover { background: #f0f4ff; color: var(--dp-tx); text-decoration: none; }' +
+		'.dp-gv-pill:focus-visible { outline: 2px solid var(--dp-accent); outline-offset: 2px; }' +
+		'.dp-gv-pill svg { width: 14px; height: 14px; color: var(--dp-tx2); flex-shrink: 0; }' +
 		'.dp-avatar { width: 24px; height: 24px; border-radius: 6px; background: var(--dp-accent); color: #fff; font-size: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center; }' +
 		'.dp-uname { font-size: 13px; font-weight: 500; color: var(--dp-tx); }' +
 		'.dp-main { max-width: 1200px; margin: 0 auto; padding: 32px 40px; }' +
@@ -192,6 +196,17 @@ function render_portal(wrapper, data) {
 				brand_html +
 				'<div class="dp-tb-right">' +
 					'<span class="dp-time" id="dp-clock">--:--</span>' +
+					(data.show_groupview_pill ?
+						'<a class="dp-gv-pill" href="/app/groupview">' +
+							'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+								'<rect width="7" height="9" x="3" y="3" rx="1"/>' +
+								'<rect width="7" height="5" x="14" y="3" rx="1"/>' +
+								'<rect width="7" height="9" x="14" y="12" rx="1"/>' +
+								'<rect width="7" height="5" x="3" y="16" rx="1"/>' +
+							'</svg>' +
+							'<span>Financial Cockpit</span>' +
+						'</a>'
+					: '') +
 					'<div class="dp-user-pill">' +
 						'<div class="dp-avatar">' + get_initials(data.full_name) + '</div>' +
 						'<span class="dp-uname">' + data.full_name + '</span>' +

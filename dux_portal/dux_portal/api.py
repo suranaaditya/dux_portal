@@ -174,11 +174,14 @@ def get_portal_data():
     except Exception:
         pass
 
+    show_groupview_pill = bool({"System Manager", "GroupView Owner", "GroupView Viewer"} & set(roles))
+
     return {
         "user": user,
         "full_name": full_name,
         "sections": result,
         "items": items,
         "settings": settings,
-        "ic_pending": ic_pending
+        "ic_pending": ic_pending,
+        "show_groupview_pill": show_groupview_pill
     }
